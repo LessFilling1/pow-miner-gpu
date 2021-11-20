@@ -102,7 +102,7 @@ double Miner::print_stats(std::string status, td::Timestamp start_at, td::uint64
   double instant_speed = static_cast<double>(instant_hashes_computed) / instant_passed;
   ss2 << std::fixed << std::setprecision(3) << instant_speed / 1e+6;
 
-  LOG(INFO) << "[ " << status << ", passed: " << td::format::as_time(passed)
+  LOG(INFO) << "[ " << status << ", passed(test): " << td::format::as_time(passed)
             << ", hashes computed: " << hashes_computed << ", instant speed: " << ss2.str()
             << " Mhash/s, average speed: " << ss.str() << " Mhash/s ]";
 
